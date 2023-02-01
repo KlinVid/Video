@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <script src="https://kit.fontawesome.com/fd6b4fb5e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- https://www.w3.org/2010/05/video/mediaevents.html -->
+    <div class="container">
+        <video id="media">
+            <source src="media/solarstone.mp4">
+        </video>
+        <div id="videoButton">
+            <button id="animBtn">
+                <i class="fa-solid fa-play active"></i>
+                <i class="fa-solid fa-pause"></i>
+            </button>
+        </div>
+    </div>
+
+    <nav>
+        <div id="buttons">
+            <button id="play">Старт</button>
+            <button id="mute">Звук</button>
+        </div>
+
+        <div id="bar">
+            <div id="progress">
+
+            </div>
+        </div>
+
+        <div id="control">
+            <input type="range" id="volume" min="0" max="1" step=".05" value=".6">
+        </div>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

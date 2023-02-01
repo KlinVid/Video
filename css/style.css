@@ -1,0 +1,156 @@
+*, *::after, *::before {
+    /* box-sizing: border-box; */
+    margin: 0;
+}
+
+#media {
+    width: 720px;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+
+nav {
+    width: 720px;
+    height: 40px;
+    margin: 5px auto;
+    background: rgb(25, 223, 223);
+    opacity: .7;
+    transition: all .3s linear;
+    border-radius: 15px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+nav:hover {
+    opacity: 1;
+}
+
+#buttons {
+    width: 135px;
+    height: 20px;
+    /* border: 1px solid magenta; */
+}
+
+#play, #mute {
+    font-weight: bold;
+    width: 65px;
+    border-color: white;
+    transition: all .3s linear;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(15, 161, 161);
+    color: #fff;
+}
+
+
+
+#bar {
+    width: 400px;
+    height: 7px;
+    border: 1px solid #fff;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#progress {
+    width: 0;
+    height: 7px;
+    background: white;
+    border-radius: 5px;
+}
+
+#animBtn > .active{
+    display: block;
+}
+
+#animBtn > i{
+    display: none;
+}
+
+#videoButton {
+    /* border: 3px solid green ; */
+    width: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+}
+
+.container {
+    position: relative;
+}
+
+#animBtn{
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.558);
+    opacity: 0;
+}
+
+#volume {
+    background: rgb(25, 223, 223);
+    /* Удаление стандартной стилизации полосы ползунка  */
+    appearance: none;
+}
+
+/* track - на конце каждого псевдоселектора отвечает за стилизацию полосы ползунка */
+#volume[type=range]::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 10px;
+    border: 1px solid rgb(2, 208, 92);
+    background-color: rgb(2, 208, 92);
+    opacity: .7;
+}
+
+/* thumb - отвечает за стилизацию самого элемент ползунка */
+#volume[type=range]::-webkit-slider-thumb {
+    background: rgb(10, 112, 112);
+    border: 1px solid rgb(10, 112, 112);
+    border-radius: 50%;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    margin-top: -3px;
+    opacity: .7;
+    /* Удаление стандартной стилизации самого элемент ползунка*/
+    appearance: none;
+}
+
+#volume[type=range]::-webkit-slider-runnable-track:hover {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+#volume[type=range]::-webkit-slider-thumb:hover {
+    opacity: 1;
+    transition: all .3s linear;
+}
+
+
+@keyframes btn{
+    from {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.4, 1.4);
+        opacity: 0;
+    }
+}
+
+
+
